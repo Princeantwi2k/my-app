@@ -1,21 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React,{useState} from 'react';
+import { SafeAreaView, View,FlatList,  StyleSheet, Text, StatusBar,Image, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+import Navigation from './assets/Route/Homestack'
 
-export default function App() {
+
+
+
+const App = () => {
+ 
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container} >
+    <Navigation />
+ 
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor:"rgb(193, 191, 191)",
+    marginTop: StatusBar.currentHeight || 0,  
+   
   },
-});
+  
+ 
+}
+);
+
+export default App;
